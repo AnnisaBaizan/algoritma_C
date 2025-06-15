@@ -1,0 +1,33 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build and Run C (Active File)",
+      "type": "shell",
+      "command": "gcc",
+      "args": [
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}",
+        "-lm",
+        "&&",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Compile and run C file"
+    }
+  ]
+}
+
+// Shortcut: CTRL + SHIFT + B
+// Compiles and runs the active C file using GCC with math library (-lm).
+// Output executable is saved in the same directory.
+// Ensure file is saved and GCC is installed.
+// Works best in VSCode with C/C++ extension.
+// If errors occur, check the terminal output.
+
+// Follder file: /mnt/d/Kuliah/Algorithm_and_Programming/ProgramC
